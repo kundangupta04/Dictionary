@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
+  background: #faf9f7;
+  color: #0f172a;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin-bottom: 15vh;
+}
+
+/* Soft gradient frame */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  background: radial-gradient(120% 60% at 0% 0%, #b5c69d40, transparent),
+    radial-gradient(120% 60% at 100% 0%, #9dc0cc40, transparent);
+}
+
+body::after {
+  background: radial-gradient(120% 60% at 0% 100%, #c7d4a940, transparent),
+    radial-gradient(120% 60% at 100% 100%, #a9c7d540, transparent);
+}
+
+/* Header */
+
+.nav {
+  padding: 24px 6vw;
+  font-size: 14px;
+}
+
+.logo {
+  letter-spacing: 2px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logo:hover{
+    opacity: 0.5;
+}
+
+/* Hero */
+
+.hero {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 0 6vw;
+}
+
+.outline-title {
+  font-size: clamp(56px, 12vw, 120px);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1px #6b7280;
+  letter-spacing: 2px;
+}
+
+.search-box {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 16px;
+  background: white;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #0f172a;
+}
+
+.search-box button {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  opacity: 0.9;
+}
+
+.hint {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Result container */
+
+.result {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 6vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.result h2 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.meta {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* Section labels */
+
+.section-title {
+  margin-top: 24px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* Cards */
+
+.meaning-box,
+.example-box,
+.pronunciation-box {
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  margin-top: 8px;
+}
+
+.audio-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+}
+
+.audio-btn:hover {
+  opacity: 0.9;
+}
+
+.error {
+  color: #b91c1c;
+  margin-top: 16px;
+}
